@@ -1,0 +1,25 @@
+{
+  "name": "imageprocess",
+  "version": "1.0.0",
+  "description": "a project for udacity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MedhatAbdelmoniem/ImageProcessingApi.git"
+  },
+  "keywords": [
+    "udacity"
+  ],
+  "author": "medhat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MedhatAbdelmoniem/ImageProcessingApi/issues"
+  },
+  "homepage": "https://github.com/MedhatAbdelmoniem/ImageProcessingApi#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
