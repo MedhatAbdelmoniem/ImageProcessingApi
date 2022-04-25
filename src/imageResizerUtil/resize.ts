@@ -9,7 +9,7 @@ const resizer = async (
     new Promise((res) => {
       sharp(`./full/${imgName}.jpg`)
         .resize(parseInt(width), parseInt(height))
-        .toFile(`./thumb/${imgName}${width}x${height}.jpg`)
+        .toFile(__dirname + `/thumb/${imgName}${width}x${height}.jpg`)
         .then(() => {
           res(true);
         });

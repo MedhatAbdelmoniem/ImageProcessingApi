@@ -25,13 +25,13 @@ routes.get('/', async (req, res) => {
           )
         ) {
           res.sendFile(
-            __dirname.split('src')[0] +
+            __dirname +
               `/thumb/${req.query.filename}${req.query.width}x${req.query.height}.jpg`
           );
         }
       } else {
         res.sendFile(
-          __dirname.split('src')[0] +
+          __dirname +
             `/thumb/${req.query.filename}${req.query.width}x${req.query.height}.jpg`
         );
       }
