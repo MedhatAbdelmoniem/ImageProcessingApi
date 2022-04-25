@@ -2,7 +2,11 @@ import fs from 'fs';
 
 let imgsNames: string[] = [];
 
-const checkRepeating = async (imgName: string, width: string, height: string): Promise<boolean> => {
+const checkRepeating = async (
+  imgName: string,
+  width: string,
+  height: string
+): Promise<boolean> => {
   const func = () =>
     new Promise((res) => {
       fs.readdir('./thumb', (err, files) => {
