@@ -9,7 +9,13 @@ routes.get('/', async (req, res) => {
   if (Object.keys(req.query).length === 0) {
     res.send('Please write your image name and your sizes in the url');
   } else if (req.query.filename && req.query.width && req.query.height) {
-    if (await ImageChecker(req.query.filename as string)) {
+    if (
+      (await ImageChecker(req.query.filename as string)) &&
+      !isNaN(parseInt(req.query.width.toString())) &&
+      !isNaN(parseInt(req.query.height.toString())) &&
+      parseInt(req.query.width.toString()) > 0 &&
+      parseInt(req.query.height.toString()) > 0
+    ) {
       if (
         await checkRepeating(
           req.query.filename as string,
@@ -36,7 +42,7 @@ routes.get('/', async (req, res) => {
         );
       }
     } else {
-      res.send('Please enter a valid name');
+      res.send('Please enter a valid name or a valid w and h');
     }
   } else {
     res.send('Please write filename or a size');

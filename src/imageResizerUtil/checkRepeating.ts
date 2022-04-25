@@ -19,8 +19,7 @@ const checkRepeating = async (
       });
     });
   imgsNames = (await func()) as string[];
-  if(imgsNames === undefined)
-  {
+  if (imgsNames === undefined) {
     return false;
   }
   if (imgsNames.includes(`${imgName}${width}x${height}.jpg`)) {
