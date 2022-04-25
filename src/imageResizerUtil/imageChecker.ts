@@ -1,6 +1,7 @@
 import fs from 'fs';
 
 let imgsNames: string[];
+
 const ImageChecker = async (imgName: string): Promise<boolean> => {
   const func = () =>
     new Promise((res) => {
