@@ -5,7 +5,7 @@ import checkRepeating from './checkRepeating';
 
 const routes = express.Router();
 
-routes.get('/', async (req, res) => {
+routes.get('/', async (req: express.Request, res: express.Response) => {
   if (Object.keys(req.query).length === 0) {
     res.send('Please write your image name and your sizes in the url');
   } else if (req.query.filename && req.query.width && req.query.height) {

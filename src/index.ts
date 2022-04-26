@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use('/images', imageResizerRoute);
 
-app.get('/', (req, res) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.send('Hello and welcome to Image Resizer');
 });
 
