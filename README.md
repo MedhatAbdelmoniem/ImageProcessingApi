@@ -9,5 +9,5 @@ scripts:
 -npm run start for starting the server
 
 -To start write /images followed by ?filename= the name of the pictures &width= &height= with the desired w and h
-
+-Example /images?filename=encenadaport&width=200&height=200 <br />
 -available pictures names ={encenadaport, icelandwaterfall, palmtunnel, santamonica}
